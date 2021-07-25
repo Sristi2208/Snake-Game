@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+  <title>W3.CSS Template</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+  <style>
+    body {
+      font-family: "Times New Roman", Georgia, Serif;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: "Playfair Display";
+      letter-spacing: 5px;
+    }
+
+    .container {
+      position: relative;
+      text-align: center;
+      /* color: white; */
+    }
+
+    .bottom-left {
+      position: absolute;
+      bottom: 8px;
+      left: 16px;
+    }
+
+    .top-left {
+      position: absolute;
+      top: 8px;
+      left: 16px;
+    }
+
+    .top-right {
+      position: absolute;
+      top: 8px;
+      right: 16px;
+    }
+
+    .bottom-right {
+      position: absolute;
+      width: 600px;
+      bottom: 100px;
+      right: 100px;
+    }
+
+    .centered {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    li {
+      font-size: 18px;
+      padding: 5px;
+    }
+
+    #rcorners1 {
+      border-radius: 25px;
+      background: white;
+      padding: 20px;
+      width: 600px;
+      /* height: 150px; */
+    }
+    button {
+      background-color: #008cba; /* Green */
+      border: none;
+      color: white;
+      padding: 16px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      transition-duration: 0.4s;
+      cursor: pointer;
+      background-color: white;
+      color: black;
+      border: 2px solid#008CBA;
+      width: 500px;
+      /* height: 50px; */
+    }
+    button:hover {
+      background-color: #008cba;
+      color: white;
+    }
+  </style>
+  <body>
+    <!-- Navbar (sit on top) -->
+    <div class="w3-top">
+      <h1 style="color: aliceblue; margin-left: 37%; font-size: 50px">
+        <b>Snake Game</b>
+      </h1>
+      <!--<div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
+    <a href="#home" class="w3-bar-item w3-button">Gourmet au Catering</a>
+     Right-sided navbar links. Hide them on small screens 
+    <div class="w3-right w3-hide-small">
+      <a href="#about" class="w3-bar-item w3-button">About</a>
+      <a href="#menu" class="w3-bar-item w3-button">Menu</a>
+      <a href="#contact" class="w3-bar-item w3-button">Contact</a>
+    </div>
+  </div>-->
+    </div>
+
+    <!-- Header -->
+
+    <header
+      class="w3-display-container w3-content w3-wide"
+      style="max-width: 1600px; min-width: 500px"
+      id="home"
+    >
+      <div class="container">
+        <img
+          class="w3-image"
+          src="pic1.jpg"
+          alt="Hamburger Catering"
+          width="1600"
+          height="800"
+        />
+        <div class="bottom-left">Bottom Left</div>
+        <div class="top-left">Top Left</div>
+        <div class="top-right">Top Right</div>
+        <div class="bottom-right">
+          <div id="rcorners1">
+            <br />
+            <h1 class="w3-center">HISTORY</h1>
+            <p class="w3-large">
+              Snake is a video game that came out in the late 1970s and has
+              maintained popularity since then, becoming somewhat of a classic.
+              The player controls a long, thin creature, resembling a snake,
+              which roams around on a bordered plane, picking up food (or some
+              other item), trying to avoid hitting its own tail or the "walls"
+              that surround the playing area. Each time the snake eats a piece
+              of food, its tail grows longer, making the game increasingly
+              difficult. The user controls the direction of the snake's head
+              (up, down, left, or right), and the snake's body follows. The
+              player cannot stop the snake from moving while the game is in
+              progress.
+            </p>
+          </div>
+        </div>
+        <div class="centered">Centered</div>
+      </div>
+
+      <div class="w3-display-bottomleft w3-padding-large w3-opacity">
+        <h1 class="w3-xxlarge">Le Catering</h1>
+      </div>
+    </header>
+
+    <!-- Page content -->
+    <div class="w3-content" style="max-width: 1100px">
+      <!-- About Section -->
+      <div class="w3-row w3-padding-64" id="about">
+        <div class="w3-col m6 w3-padding-large w3-hide-small">
+          <div style="display: flex; margin-right: auto; margin-left: auto">
+            <a href="main.html"
+              ><button style="margin-top: 500px">Start the game</button>
+            </a>
+          </div>
+        </div>
+
+        <div class="w3-col m6 w3-padding-large">
+          <h1 class="w3-center">Rules of the game</h1>
+          <br />
+          <p class="w3-large"></p>
+          <ul>
+            <li>
+              The snake starts at the center of the board, moving north
+              (upward).
+            </li>
+            <li>The snake moves at a constant speed.</li>
+            <li>
+              The snake moves only north, south, east, or west (ignore the
+              versions of the game where the snake can move in curves).
+            </li>
+            <li>
+              The snake "moves" by adding a square to its head and
+              simultaneously deleting a square from the tip of its tail.
+            </li>
+            <li>
+              "Orange circle" appear at random locations, and persist for a
+              random amount of time (but usually long enough for it to be
+              possible for the snake to get to the apple).
+            </li>
+
+            <li>
+              Blue circle is a poison, if the snake eat that food he will die
+              and the game will be over.
+            </li>
+            <li>
+              There is always exactly one orange circle visible at any given
+              time.
+            </li>
+            <li>
+              When the snake "eats" (runs into) an orange circle, it gets
+              longer.
+            </li>
+            <li>
+              (This is hard to describe, so play a couple of games to see what I
+              mean.) When the snake gets longer, say by n squares, it does so by
+              not deleting squares from its tail for the next n moves.
+            </li>
+            <li>The game continues until the snake "dies".</li>
+            <li>
+              A snake dies by either (1) running into the edge of the board, or
+              (2) by running into its own tail.
+            </li>
+            <li>
+              The final score is based on the number of apples eaten by the
+              snake.
+            </li>
+
+            <hr />
+
+            <!-- Footer -->
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
